@@ -1,0 +1,26 @@
+<head>
+ <title>Leaderboard</title>
+</head>
+<body>
+ <div class="container">
+  <div class="row">
+   <div class="span8"></div>
+    <h1>Leaderboard</h1>
+    <p>{{> leaderboard}}</p>
+  </div>
+ </div>
+</body>
+
+<template name="leaderboard">
+ Hello world, {{bloke}}
+     
+<ul>
+    {{#each player}}
+        <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
+    {{/each}}
+    <input type="button" id="increment" value="Give 5 Points" class="btn btn-success" />
+</ul>
+
+<p>Object ID: {{showSelectedPlayer._id}}
+</p>
+</template>
