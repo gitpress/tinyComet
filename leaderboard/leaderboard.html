@@ -19,8 +19,21 @@
         <li class="player {{selectedClass}}">{{name}}: {{score}}</li>
     {{/each}}
     <input type="button" id="increment" value="Give 5 Points" class="btn btn-success" />
+    <input type="button" id="decrement" value="Take 5 Points" class="btn btn-warning" />
 </ul>
+
+<p>	
+{{> addPlayerForm}}
+</p>
 
 <p>Object ID: {{showSelectedPlayer._id}}
 </p>
+</template>
+
+<template name="addPlayerForm">
+<form>
+    <input type="text" id="playerName">
+    <input type="submit" value="Add Player" class="btn btn-success">
+    <input type="button" id="remove" value="Remove Player" class="btn btn-danger" />
+</form>
 </template>
